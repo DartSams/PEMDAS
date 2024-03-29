@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - player
+  - healthPickup
+  - damagePickup
+  - coinPickup
+  - ground
   layers:
   - Default
   - TransparentFX
