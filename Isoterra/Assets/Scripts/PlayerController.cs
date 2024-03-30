@@ -71,6 +71,24 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PortalIn"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""e24dd000-9fd1-44f3-994c-6e1d1845a86d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PortalOut"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""515ab61e-fa1f-4c18-b45d-3c69d6b191fa"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -172,6 +190,28 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
                     ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cf49cc3b-a1a2-4718-8cd6-5f1f330c998c"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PortalIn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9acb7c0a-d836-48e2-8acb-6f61ba4bbfab"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PortalOut"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -185,6 +225,8 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Crouch = m_Player.FindAction("Crouch", throwIfNotFound: true);
         m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
+        m_Player_PortalIn = m_Player.FindAction("PortalIn", throwIfNotFound: true);
+        m_Player_PortalOut = m_Player.FindAction("PortalOut", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -251,6 +293,8 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Crouch;
     private readonly InputAction m_Player_Shoot;
+    private readonly InputAction m_Player_PortalIn;
+    private readonly InputAction m_Player_PortalOut;
     public struct PlayerActions
     {
         private @PlayerController m_Wrapper;
@@ -260,6 +304,8 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Crouch => m_Wrapper.m_Player_Crouch;
         public InputAction @Shoot => m_Wrapper.m_Player_Shoot;
+        public InputAction @PortalIn => m_Wrapper.m_Player_PortalIn;
+        public InputAction @PortalOut => m_Wrapper.m_Player_PortalOut;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -284,6 +330,12 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
             @Shoot.started += instance.OnShoot;
             @Shoot.performed += instance.OnShoot;
             @Shoot.canceled += instance.OnShoot;
+            @PortalIn.started += instance.OnPortalIn;
+            @PortalIn.performed += instance.OnPortalIn;
+            @PortalIn.canceled += instance.OnPortalIn;
+            @PortalOut.started += instance.OnPortalOut;
+            @PortalOut.performed += instance.OnPortalOut;
+            @PortalOut.canceled += instance.OnPortalOut;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -303,6 +355,12 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
             @Shoot.started -= instance.OnShoot;
             @Shoot.performed -= instance.OnShoot;
             @Shoot.canceled -= instance.OnShoot;
+            @PortalIn.started -= instance.OnPortalIn;
+            @PortalIn.performed -= instance.OnPortalIn;
+            @PortalIn.canceled -= instance.OnPortalIn;
+            @PortalOut.started -= instance.OnPortalOut;
+            @PortalOut.performed -= instance.OnPortalOut;
+            @PortalOut.canceled -= instance.OnPortalOut;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -327,5 +385,7 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
+        void OnPortalIn(InputAction.CallbackContext context);
+        void OnPortalOut(InputAction.CallbackContext context);
     }
 }

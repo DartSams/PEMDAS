@@ -9,6 +9,9 @@ TagManager:
   - damagePickup
   - coinPickup
   - ground
+  - portalIn
+  - portalOut
+  - weaponPickup
   layers:
   - Default
   - TransparentFX

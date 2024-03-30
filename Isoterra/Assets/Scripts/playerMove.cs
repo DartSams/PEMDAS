@@ -13,36 +13,48 @@ public class playerMove : MonoBehaviour
     public CinemachineVirtualCamera[] VCameras; //list of possible virtual cameras
     private enum cameras { thirdPerson, isometricCam}
     public Transform cameraTransform; //the maincamera
-    public GameObject bullet;
-    public Transform gunBarrell;
-    Rigidbody rb;
+    private GameObject weaponPickup; //placeholder gameobject set every time the player enters a pickupable weapon
+    public Transform gunHolster; //transform position that holds the position for where the player holds their gun
+    public GameObject bullet; //objects to be shot out of gun
+    public Transform gunBarrell; //position of where gun bullets should spawn at 
+    Rigidbody rb; //the players rigidbody componenet
     private PlayerController input = null;
-    public TMP_Text healthText;
-    public TMP_Text currencyText;
-    public TMP_Text roomTimerText;
-    private Vector2 moveVector;
-    Vector3 playerScale;
+    public TMP_Text healthText; //player health text 
+    public TMP_Text currencyText; //player currency text
+    public TMP_Text roomTimerText; //player room timer text (the timer will be reset when entering a room everytime)
+    public TMP_Text pickupText;
+    private Vector2 moveVector; //vector 2 of player movement
+    RaycastHit mouseHit; //raycast of what the mouse touches
+    Vector3 playerScale; //the player original height scale
+    public LayerMask groundMask; //the ground layer used to judge what the player can jump on
+    RaycastHit hit; //raycast of what the players gun hits
+    public GameObject portalIn; 
+    public GameObject portalOut;
 
-    public LayerMask groundMask;
 
+    public string currentGunType = "portal";
     public bool isometric = true;
     public bool thirdPerson = false;
     public float rotationSpeed = 50f; //player rotation speed
     public float moveSpeed = 3f;
     public float maxHealth = 100f; //starting max health
     public float currentHealth; //variable for current health 
+    public float maxStamina = 100f; //starting max stamina
+    public float currentStamina; //variable for current stamina 
     public int ammo = 30;
     public float coins = 0; //variable for money
     private float groundRadius = 0.1f;
     private float jumpPower = 5;//with a gravity scale of 10 in the rigidbody
+    public float boostSpeed = 5f; //variable to multiple moveSpeed by to simulate sprinting
+    public float boostDuration = 0.5f; //how long sprint last until moveSpeed returns to normal
     public bool isBoosting = false;
-    public float boostSpeed = 5f;
-    public float boostDuration = 0.5f;
     private bool isCrouch = false;
     private bool isSprinting = false;
     private bool isShoot = false;
     public bool isJumping = false;
     public bool grounded = false;
+    public bool canPickupState = false; //variable to toggle when player enters a weaponPickup
+
 
     Timer t = new Timer();
     private string hour = "0";
@@ -58,6 +70,7 @@ public class playerMove : MonoBehaviour
         currentHealth = maxHealth;
         healthText.text = currentHealth.ToString() + "/" + maxHealth.ToString();
         playerScale = transform.localScale;
+        pickupText.enabled = false;
 
         t.Elapsed += new ElapsedEventHandler(onTimer);
         t.Interval = 100;
@@ -67,7 +80,6 @@ public class playerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         roomTimerText.text = makeTime(timer); //updates room timer
 
         Move();
@@ -96,6 +108,16 @@ public class playerMove : MonoBehaviour
                 t.Start();
             }
         } //pause the game
+
+        if (Input.GetKeyUp(KeyCode.E) && canPickupState)
+        {
+            Debug.Log("picking up weapon");
+            Destroy(gunHolster.transform.GetChild(0).gameObject); //removes the current gun from the gunholster
+            weaponPickup.transform.parent = gunHolster; //adds the pickupable weapon to the players gunholster so now the player can utilize the new wapon
+            weaponPickup.transform.position = gunHolster.transform.position; //sets the position of the new pickupable weapon
+            currentGunType = weaponPickup.name; //updates the current weapon name to the new pickupable weapon name
+            canPickupState = false;
+        } //checks if the player presses E and is near a pickupable weapon 
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -125,6 +147,47 @@ public class playerMove : MonoBehaviour
         {
             grounded = true;
         }
+
+        if (collision.collider.tag == "portalIn")
+        {
+            if (portalOut.transform.rotation.y > 0) //checks the opposite portal y rotation (unity rotation goes from 0-1 but in coordinates its 0-90 degrees when a object is rotated 90 degress code reads it as 0.707)
+            {
+                transform.position = new Vector3(portalOut.transform.position.x - 1, portalOut.transform.position.y, portalOut.transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3(portalOut.transform.position.x, portalOut.transform.position.y, portalOut.transform.position.z - 1.3f);
+            }
+
+        } //sends the player to the opposite portal 
+
+        if (collision.collider.tag == "portalOut")
+        {
+            if (portalIn.transform.rotation.y > 0)
+            {
+                transform.position = new Vector3(portalIn.transform.position.x - 1, portalIn.transform.position.y, portalIn.transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3(portalIn.transform.position.x, portalIn.transform.position.y, portalIn.transform.position.z + 1.3f);
+            }
+        } //sends the player to the opposite portal 
+
+        if (collision.collider.tag == "weaponPickup")
+        {
+            pickupText.enabled = true;
+            canPickupState = true; 
+            weaponPickup = collision.gameObject; //creates a placeholder gameobject variable so can check if the player presses E to pickup
+        } //toggle when the player enters a pickupable weapon
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.tag == "weaponPickup")
+        {
+            canPickupState = false;
+            pickupText.enabled = false;
+        }
     }
 
     private void Move()
@@ -149,6 +212,27 @@ public class playerMove : MonoBehaviour
         ////return Physics.CheckSphere(feet.position, groundRadius, jumpableGround);
 
     }
+
+    Vector3 getMousePosition()
+    {
+        Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(cameraRay, out hit))
+        {
+            mouseHit = hit;
+            Debug.DrawLine(cameraRay.origin, hit.point, Color.blue); // Draw a line from camera to the point where the ray hits
+            return hit.point;
+        }
+        else
+        {
+            mouseHit = hit;
+            // If the ray doesn't hit anything, return a default Vector3 value
+            return Vector3.zero;
+        }
+    }
+
+
 
     void rotatePlayerToMouse()
     {
@@ -217,9 +301,13 @@ public class playerMove : MonoBehaviour
         input.Player.Sprint.performed += OnSprintPerformed;
         input.Player.Crouch.performed += OnCrouchPerformed;
         input.Player.Crouch.canceled += OnCrouchCanceled;
+
+
         input.Player.Shoot.performed += OnShootPerformed;
         input.Player.Shoot.performed += OnShootCanceled;
 
+        input.Player.PortalIn.performed += OnShootPortalIn;
+        input.Player.PortalOut.performed += OnShootPortalOut;
     }
 
     private void OnDisable()
@@ -233,8 +321,13 @@ public class playerMove : MonoBehaviour
         input.Player.Sprint.canceled -= OnSprintCanceled;
         input.Player.Crouch.performed -= OnCrouchPerformed;
         input.Player.Crouch.canceled -= OnCrouchCanceled;
+
+
         input.Player.Shoot.performed -= OnShootPerformed;
         input.Player.Shoot.canceled -= OnShootCanceled;
+
+        input.Player.PortalIn.performed -= OnShootPortalIn;
+        input.Player.PortalOut.performed -= OnShootPortalOut;
     }
 
     private void OnMovePerformed(InputAction.CallbackContext value)
@@ -315,25 +408,51 @@ public class playerMove : MonoBehaviour
     {
         float val = value.ReadValue<float>();
         //print(val);
-        RaycastHit hit;
         Physics.Raycast(gunBarrell.position, transform.TransformDirection(Vector3.forward.normalized), out hit, Mathf.Infinity);
         Debug.DrawRay(gunBarrell.position, transform.TransformDirection(Vector3.forward.normalized) * hit.distance, Color.green); //makes the ray visible in scene
 
         if (val == 1 && ammo > 0)
         {
-            isShoot = true;
-            GameObject b = Instantiate(bullet, gunBarrell.position, Quaternion.LookRotation(gunBarrell.transform.TransformDirection(Vector3.forward.normalized)));
-            ammo -= 1;
-            //Physics.IgnoreCollision(b.GetComponent<Collider>(),gunBarrell.GetComponent<Collider>());
+            shoot();
+            Debug.Log(hit.collider.name);
 
         }
         else if (val == 0) { isShoot = false; }
                                                                                                        
 
         //Debug.Log(value.isPressed);
-
-
     }
+    private void shoot()
+    {
+        isShoot = true;
+        ammo -= 1;
+        if (currentGunType == "single")
+        {
+            Instantiate(bullet, gunBarrell.position, Quaternion.LookRotation(gunBarrell.transform.TransformDirection(Vector3.forward.normalized)));
+        } else if (currentGunType == "portalGun")
+        {
+            //
+        }
+    }
+
+    void OnShootPortalIn(InputAction.CallbackContext value)
+    {
+        Vector3 mousePos = getMousePosition();
+        //Instantiate(portalIn, hit.transform.position, Quaternion.LookRotation(gunBarrell.transform.TransformDirection(Vector3.forward.normalized)));
+        portalIn.transform.position = new Vector3(mousePos.x,mousePos.y,mousePos.z - 0.5f);
+        portalIn.transform.rotation = mouseHit.transform.rotation; //rotates the portal to match the rotation of what the 
+
+    } //moves the portal to where the mouse is 
+
+    void OnShootPortalOut(InputAction.CallbackContext value)
+    {
+        Vector3 mousePos = getMousePosition();
+        Debug.Log(portalOut.transform.rotation.y);
+        //Instantiate(portalIn, hit.transform.position, Quaternion.LookRotation(gunBarrell.transform.TransformDirection(Vector3.forward.normalized)));
+        portalOut.transform.position = new Vector3(mousePos.x, mousePos.y, mousePos.z - 0.5f);
+        portalOut.transform.rotation = mouseHit.transform.rotation; //rotates the portal to match the rotation of what the 
+
+    } //moves the portal to where the mouse is 
 
     private void OnShootCanceled(InputAction.CallbackContext value)
     {
@@ -341,4 +460,5 @@ public class playerMove : MonoBehaviour
         //isShoot = false;
 
     }
+
 }
