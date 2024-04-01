@@ -9,7 +9,6 @@ using System.Timers;
 
 public class playerMove : MonoBehaviour
 {
-    public CinemachineVirtualCamera vcam;
     public CinemachineVirtualCamera[] VCameras; //list of possible virtual cameras
     private enum cameras { thirdPerson, isometricCam}
     public Transform cameraTransform; //the maincamera
@@ -24,36 +23,36 @@ public class playerMove : MonoBehaviour
     public TMP_Text roomTimerText; //player room timer text (the timer will be reset when entering a room everytime)
     public TMP_Text pickupText;
     private Vector2 moveVector; //vector 2 of player movement
-    RaycastHit mouseHit; //raycast of what the mouse touches
     Vector3 playerScale; //the player original height scale
     public LayerMask groundMask; //the ground layer used to judge what the player can jump on
     RaycastHit hit; //raycast of what the players gun hits
     public GameObject portalIn; 
     public GameObject portalOut;
+    public UIBar uibar;
 
 
     public string currentGunType = "portal";
-    public bool isometric = true;
-    public bool thirdPerson = false;
-    public float rotationSpeed = 50f; //player rotation speed
+    private bool isometric = true;
+    private bool thirdPerson = false;
+    private float rotationSpeed = 50f; //player rotation speed
     public float moveSpeed = 3f;
-    public float maxHealth = 100f; //starting max health
-    public float currentHealth; //variable for current health 
+    private float maxHealth = 100f; //starting max health
+    private float currentHealth; //variable for current health 
     public float maxStamina = 100f; //starting max stamina
-    public float currentStamina; //variable for current stamina 
+    private float currentStamina; //variable for current stamina 
     public int ammo = 30;
-    public float coins = 0; //variable for money
+    private float coins = 0; //variable for money
     private float groundRadius = 0.1f;
     private float jumpPower = 5;//with a gravity scale of 10 in the rigidbody
-    public float boostSpeed = 5f; //variable to multiple moveSpeed by to simulate sprinting
-    public float boostDuration = 0.5f; //how long sprint last until moveSpeed returns to normal
-    public bool isBoosting = false;
+    private float boostSpeed = 5f; //variable to multiple moveSpeed by to simulate sprinting
+    private float boostDuration = 0.5f; //how long sprint last until moveSpeed returns to normal
+    private bool isBoosting = false;
     private bool isCrouch = false;
     private bool isSprinting = false;
     private bool isShoot = false;
-    public bool isJumping = false;
-    public bool grounded = false;
-    public bool canPickupState = false; //variable to toggle when player enters a weaponPickup
+    private bool isJumping = false;
+    private bool grounded = false;
+    private bool canPickupState = false; //variable to toggle when player enters a weaponPickup
 
 
     Timer t = new Timer();
@@ -67,14 +66,18 @@ public class playerMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         input = new PlayerController(); //new instance of the new input system 
-        currentHealth = maxHealth;
+        currentHealth = maxHealth; //starts the scene by setting the current health to the max health
+        currentStamina = maxStamina;
+        uibar.updateHealthbar(maxHealth, currentHealth);
+        uibar.updateStaminabar(maxStamina, currentStamina);
+
         healthText.text = currentHealth.ToString() + "/" + maxHealth.ToString();
         playerScale = transform.localScale;
         pickupText.enabled = false;
 
         t.Elapsed += new ElapsedEventHandler(onTimer);
         t.Interval = 100;
-        t.Start();
+        t.Start(); //starts room timer
     }
 
     // Update is called once per frame
@@ -112,11 +115,18 @@ public class playerMove : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.E) && canPickupState)
         {
             Debug.Log("picking up weapon");
-            Destroy(gunHolster.transform.GetChild(0).gameObject); //removes the current gun from the gunholster
+            Debug.Log(transform.childCount);
+            foreach (Transform child in gunHolster.transform)
+            {
+                Destroy(child.gameObject); //removes the current gun from the gunholster
+            }
             weaponPickup.transform.parent = gunHolster; //adds the pickupable weapon to the players gunholster so now the player can utilize the new wapon
             weaponPickup.transform.position = gunHolster.transform.position; //sets the position of the new pickupable weapon
+            weaponPickup.transform.rotation = gunHolster.transform.rotation; //sets the rotation of the new pickupable weapon
             currentGunType = weaponPickup.name; //updates the current weapon name to the new pickupable weapon name
-            canPickupState = false;
+            weaponPickup.tag = "weapon";
+            canPickupState = false; //player has left the pickupable weapon area
+            pickupText.enabled = false;
         } //checks if the player presses E and is near a pickupable weapon 
     }
 
@@ -126,6 +136,7 @@ public class playerMove : MonoBehaviour
         {
             Debug.Log("Pickup (health) collected");
             currentHealth += 10;
+            uibar.updateHealthbar(maxHealth, currentHealth);
             healthText.text = currentHealth.ToString() + "/" + maxHealth.ToString();
             Destroy(collision.gameObject);
         }
@@ -213,25 +224,6 @@ public class playerMove : MonoBehaviour
 
     }
 
-    Vector3 getMousePosition()
-    {
-        Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(cameraRay, out hit))
-        {
-            mouseHit = hit;
-            Debug.DrawLine(cameraRay.origin, hit.point, Color.blue); // Draw a line from camera to the point where the ray hits
-            return hit.point;
-        }
-        else
-        {
-            mouseHit = hit;
-            // If the ray doesn't hit anything, return a default Vector3 value
-            return Vector3.zero;
-        }
-    }
-
 
 
     void rotatePlayerToMouse()
@@ -305,9 +297,6 @@ public class playerMove : MonoBehaviour
 
         input.Player.Shoot.performed += OnShootPerformed;
         input.Player.Shoot.performed += OnShootCanceled;
-
-        input.Player.PortalIn.performed += OnShootPortalIn;
-        input.Player.PortalOut.performed += OnShootPortalOut;
     }
 
     private void OnDisable()
@@ -325,9 +314,6 @@ public class playerMove : MonoBehaviour
 
         input.Player.Shoot.performed -= OnShootPerformed;
         input.Player.Shoot.canceled -= OnShootCanceled;
-
-        input.Player.PortalIn.performed -= OnShootPortalIn;
-        input.Player.PortalOut.performed -= OnShootPortalOut;
     }
 
     private void OnMovePerformed(InputAction.CallbackContext value)
@@ -372,6 +358,8 @@ public class playerMove : MonoBehaviour
     {
         Debug.Log("Sprinting");
         isSprinting = true;
+        currentStamina = currentStamina - 10;
+        uibar.updateStaminabar(maxStamina, currentStamina);
         moveSpeed *= boostSpeed; //converts the regular movement speed to be multiplied by the boost speed
         //speed = Mathf.Clamp(speed, 5f, 30);
         Invoke("StopBoost", boostDuration); //calls function (stopboost) after a certain amount of time (boostduration)
@@ -426,33 +414,16 @@ public class playerMove : MonoBehaviour
     {
         isShoot = true;
         ammo -= 1;
-        if (currentGunType == "single")
+        currentStamina -= 5;
+        uibar.updateStaminabar(maxStamina, currentStamina);
+        if (currentGunType == "pistol")
         {
             Instantiate(bullet, gunBarrell.position, Quaternion.LookRotation(gunBarrell.transform.TransformDirection(Vector3.forward.normalized)));
         } else if (currentGunType == "portalGun")
         {
-            //
+            // refer to the rangedAttacks script
         }
     }
-
-    void OnShootPortalIn(InputAction.CallbackContext value)
-    {
-        Vector3 mousePos = getMousePosition();
-        //Instantiate(portalIn, hit.transform.position, Quaternion.LookRotation(gunBarrell.transform.TransformDirection(Vector3.forward.normalized)));
-        portalIn.transform.position = new Vector3(mousePos.x,mousePos.y,mousePos.z - 0.5f);
-        portalIn.transform.rotation = mouseHit.transform.rotation; //rotates the portal to match the rotation of what the 
-
-    } //moves the portal to where the mouse is 
-
-    void OnShootPortalOut(InputAction.CallbackContext value)
-    {
-        Vector3 mousePos = getMousePosition();
-        Debug.Log(portalOut.transform.rotation.y);
-        //Instantiate(portalIn, hit.transform.position, Quaternion.LookRotation(gunBarrell.transform.TransformDirection(Vector3.forward.normalized)));
-        portalOut.transform.position = new Vector3(mousePos.x, mousePos.y, mousePos.z - 0.5f);
-        portalOut.transform.rotation = mouseHit.transform.rotation; //rotates the portal to match the rotation of what the 
-
-    } //moves the portal to where the mouse is 
 
     private void OnShootCanceled(InputAction.CallbackContext value)
     {

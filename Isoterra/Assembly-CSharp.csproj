@@ -62,6 +62,9 @@
     <Compile Include="Assets\Scripts\pickupAnimation.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\bulletController.cs" />
+    <Compile Include="Assets\Scripts\orbitalMeleeWeapon.cs" />
+    <Compile Include="Assets\Scripts\rangedAttacks.cs" />
+    <Compile Include="Assets\Scripts\UIBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

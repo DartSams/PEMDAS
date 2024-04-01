@@ -12,6 +12,8 @@ TagManager:
   - portalIn
   - portalOut
   - weaponPickup
+  - meleeWeapon
+  - weapon
   layers:
   - Default
   - TransparentFX
