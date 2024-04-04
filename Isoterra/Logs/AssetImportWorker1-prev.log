@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2021.3/staging' branch; Version is '2021.3.33f1 (ee5a2aa03ab2) revision 15620650'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'en' Physical Memory: 65388 MB
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'en' Physical Memory: 32509 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2021.3.33f1\Editor\Unity.exe
+G:\Unity\2021.3.33f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker1
 -projectPath
-C:/Users/godof/Desktop/VSCodeProjects/GitHub/PEMDAS/Isoterra
+C:/Users/chris/Documents/GitHub/PEMDAS/Isoterra
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-57236
-Successfully changed project path to: C:/Users/godof/Desktop/VSCodeProjects/GitHub/PEMDAS/Isoterra
-C:/Users/godof/Desktop/VSCodeProjects/GitHub/PEMDAS/Isoterra
+54118
+Successfully changed project path to: C:/Users/chris/Documents/GitHub/PEMDAS/Isoterra
+C:/Users/chris/Documents/GitHub/PEMDAS/Isoterra
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,118 +47,117 @@ C:/Users/godof/Desktop/VSCodeProjects/GitHub/PEMDAS/Isoterra
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [5936] Host "[IP] 11.28.4.138 [Port] 0 [Flags] 2 [Guid] 2280539178 [EditorId] 2280539178 [Version] 1048832 [Id] WindowsEditor(7,Dart_Gaming_Com) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [21964] Host "[IP] 192.168.1.4 [Port] 0 [Flags] 2 [Guid] 3628539205 [EditorId] 3628539205 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-7NDQFPP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [5936] Host "[IP] 11.28.4.138 [Port] 0 [Flags] 2 [Guid] 2280539178 [EditorId] 2280539178 [Version] 1048832 [Id] WindowsEditor(7,Dart_Gaming_Com) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [21964] Host "[IP] 192.168.1.4 [Port] 0 [Flags] 2 [Guid] 3628539205 [EditorId] 3628539205 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-7NDQFPP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with {0} workers.
-Refreshing native plugins compatible for Editor in 65.41 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 88.49 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.33f1 (ee5a2aa03ab2)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.33f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/godof/Desktop/VSCodeProjects/GitHub/PEMDAS/Isoterra/Assets
+[Subsystems] Discovering subsystems at path G:/Unity/2021.3.33f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/chris/Documents/GitHub/PEMDAS/Isoterra/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3050 Ti Laptop GPU (ID=0x25e0)
+    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2484)
     Vendor:   NVIDIA
-    VRAM:     3990 MB
-    Driver:   30.0.15.1236
+    VRAM:     8018 MB
+    Driver:   31.0.15.5186
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.33f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.33f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.33f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56640
+Mono path[0] = 'G:/Unity/2021.3.33f1/Editor/Data/Managed'
+Mono path[1] = 'G:/Unity/2021.3.33f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'G:/Unity/2021.3.33f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56148
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.33f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003600 seconds.
+Register platform support module: G:/Unity/2021.3.33f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002559 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 75.92 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 89.41 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.550 seconds
+- Completed reload, in  0.626 seconds
 Domain Reload Profiling:
-	ReloadAssembly (551ms)
-		BeginReloadAssembly (76ms)
+	ReloadAssembly (626ms)
+		BeginReloadAssembly (96ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (389ms)
-			LoadAssemblies (75ms)
+		EndReloadAssembly (448ms)
+			LoadAssemblies (96ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (84ms)
+			SetupTypeCache (93ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (23ms)
-			SetupLoadedEditorAssemblies (251ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (293ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (76ms)
+				RefreshPlugins (89ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (129ms)
-				ProcessInitializeOnLoadMethodAttributes (38ms)
+				ProcessInitializeOnLoadAttributes (150ms)
+				ProcessInitializeOnLoadMethodAttributes (45ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003703 seconds.
+Registered in 0.004909 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 62.89 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 85.38 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Completed reload, in  1.320 seconds
+- Completed reload, in  1.660 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1321ms)
-		BeginReloadAssembly (106ms)
+	ReloadAssembly (1661ms)
+		BeginReloadAssembly (115ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (17ms)
-		EndReloadAssembly (1132ms)
-			LoadAssemblies (79ms)
+			CreateAndSetChildDomain (15ms)
+		EndReloadAssembly (1453ms)
+			LoadAssemblies (86ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (211ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (47ms)
-			SetupLoadedEditorAssemblies (781ms)
+			SetupTypeCache (261ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (55ms)
+			SetupLoadedEditorAssemblies (1030ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (63ms)
-				BeforeProcessingInitializeOnLoad (71ms)
-				ProcessInitializeOnLoadAttributes (621ms)
-				ProcessInitializeOnLoadMethodAttributes (18ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				RefreshPlugins (85ms)
+				BeforeProcessingInitializeOnLoad (87ms)
+				ProcessInitializeOnLoadAttributes (835ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.39 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3605 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 39 unused Assets / (119.2 KB). Loaded Objects now: 4065.
-Memory consumption went from 128.0 MB to 127.9 MB.
-Total: 2.771000 ms (FindLiveObjects: 0.276900 ms CreateObjectMapping: 0.100400 ms MarkObjects: 2.309600 ms  DeleteObjects: 0.083100 ms)
+Unloading 3983 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (179.3 KB). Loaded Objects now: 4445.
+Memory consumption went from 146.6 MB to 146.5 MB.
+Total: 2.198500 ms (FindLiveObjects: 0.153100 ms CreateObjectMapping: 0.074000 ms MarkObjects: 1.904500 ms  DeleteObjects: 0.066500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -168,316 +167,252 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1168027.065435 seconds.
-  path: Assets
-  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 677702.419596 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/bannerTerrainToolkit.png
+  artifactKey: Guid(dd462f206a127b4479650292dc950e42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79842766b460edbeab6a34051e857a80') in 0.012949 seconds 
-Number of asset objects unloaded after import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/bannerTerrainToolkit.png using Guid(dd462f206a127b4479650292dc950e42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '497e34012eacf05c89161c53d09310b2') in 0.069609 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 52.951640 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Blue2.mat
-  artifactKey: Guid(e070baac7ac0c374ba010641b095c1b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000020 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/Model_03_Visual.png
+  artifactKey: Guid(fbfc9f02deac42d47b5997fc42dc205b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Blue2.mat using Guid(e070baac7ac0c374ba010641b095c1b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03fb6a16b42a0bee5f09c10e6f59fb23') in 0.130975 seconds 
-Number of asset objects unloaded after import = 3
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/Model_03_Visual.png using Guid(fbfc9f02deac42d47b5997fc42dc205b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '462ce49807b309d606eac0b3697c5b26') in 0.013735 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Purple.mat
-  artifactKey: Guid(08ad40672f8bdd84c8231727ae06ba48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000018 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/Model_00_Tx2.jpg
+  artifactKey: Guid(39c02aab05e21004fa57273211dd8d73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Purple.mat using Guid(08ad40672f8bdd84c8231727ae06ba48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6084c943d868e289f671f9466208826') in 0.013518 seconds 
-Number of asset objects unloaded after import = 3
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/Model_00_Tx2.jpg using Guid(39c02aab05e21004fa57273211dd8d73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3e9ab1bc9a475cd0e9366eeea0a9f53') in 0.018004 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/slopeStop2.png
+  artifactKey: Guid(6da9213b25ffb1c41ade0ca8c13256c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/slopeStop2.png using Guid(6da9213b25ffb1c41ade0ca8c13256c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '865a4f28cdb0b17e30dd251a2a4eda2f') in 0.012867 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/iconGenToolkit.png
+  artifactKey: Guid(2cfb482fbbcd08c4bbcbfa6361421800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/iconGenToolkit.png using Guid(2cfb482fbbcd08c4bbcbfa6361421800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd5c079f4f9edff496df5957e2ab5a27') in 0.012897 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/Model_03_Cliff.jpg
+  artifactKey: Guid(efdd472a85b26c148b41ceea1b92e678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/Model_03_Cliff.jpg using Guid(efdd472a85b26c148b41ceea1b92e678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a0faca04cc4861735b041564506ea75') in 0.014261 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/green.png
+  artifactKey: Guid(20152cc238243e4419c8aecc717e1be1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/green.png using Guid(20152cc238243e4419c8aecc717e1be1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a18f3f0431381bb0a2b268d50d59618c') in 0.012290 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/blackToWhite.png
+  artifactKey: Guid(568b1492b02bce14b807479f0966fc8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/blackToWhite.png using Guid(568b1492b02bce14b807479f0966fc8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28f408c9f9d3ea658260d235a107d3ba') in 0.012688 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/blue.png
+  artifactKey: Guid(276d2203bd541e14b93cb7ef729c4dc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/blue.png using Guid(276d2203bd541e14b93cb7ef729c4dc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef06f414f5cacf92dc00a1417329a1b8') in 0.012004 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
   Time since last request: 0.000016 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Grey2.mat
-  artifactKey: Guid(572218b186e96c648853f56156b07925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/iconGenOptions.png
+  artifactKey: Guid(f9d1004114c5cf246b1a01e6ccbd2a44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Grey2.mat using Guid(572218b186e96c648853f56156b07925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ae7f7b023fe07a491500d90e5fee488') in 0.013241 seconds 
-Number of asset objects unloaded after import = 3
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/iconGenOptions.png using Guid(f9d1004114c5cf246b1a01e6ccbd2a44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3f035c0dc3d597af150cdd212e4c9cb') in 0.012043 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/Model_05_Tx1.jpg
+  artifactKey: Guid(c4eaa7b086d56ec4a91d081a8ebe78f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/Model_05_Tx1.jpg using Guid(c4eaa7b086d56ec4a91d081a8ebe78f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6399dc6a6a01660ea1d341651f96cc0') in 0.014266 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/iconMountains.png
+  artifactKey: Guid(d19e788ede4c2ad47b2c74c4fcfe67b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/iconMountains.png using Guid(d19e788ede4c2ad47b2c74c4fcfe67b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de91585fcc423dcffa04ffeac62d9c57') in 0.012300 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/modelBackground.png
+  artifactKey: Guid(797a6a7a9d8e4624fa3db25d5c9588b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/modelBackground.png using Guid(797a6a7a9d8e4624fa3db25d5c9588b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd104ac373540e6695dc9725f4400a890') in 0.012368 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/blackButtonDisabled.png
+  artifactKey: Guid(dcd3f45167fe81e4d9f9c4816eaa0321) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/blackButtonDisabled.png using Guid(dcd3f45167fe81e4d9f9c4816eaa0321) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e4524944963c81a77ee433fc80d1893') in 0.013160 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/Model_04_Tx1.jpg
+  artifactKey: Guid(d983623856d7f4b44bdb80d653f7f240) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/Model_04_Tx1.jpg using Guid(d983623856d7f4b44bdb80d653f7f240) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43bf4e142739c90de9d4f25a9267ab5f') in 0.014017 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/iconPlateaus.png
+  artifactKey: Guid(60e157d979f75574a85749ba6d80af20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/iconPlateaus.png using Guid(60e157d979f75574a85749ba6d80af20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a754830d3a7bd491ea5dc22f58408e64') in 0.012599 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/blackButtonDown.png
+  artifactKey: Guid(1b0dac0a49a72814db0c023c900aae84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/blackButtonDown.png using Guid(1b0dac0a49a72814db0c023c900aae84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd72756c9ebf612a1198f3747a3032d3') in 0.012076 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/iconGenTexture.png
+  artifactKey: Guid(9ff6998f0fac2954b8d002fd1c3dacee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/iconGenTexture.png using Guid(9ff6998f0fac2954b8d002fd1c3dacee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd51ab6dbe40e7390c6451a0d07e9c898') in 0.013364 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/Model_00_Visual.png
+  artifactKey: Guid(f074983037d8b2d4fbeb64396a539e48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/Model_00_Visual.png using Guid(f074983037d8b2d4fbeb64396a539e48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7c39aecfd74f1f79ec8463e062ea323') in 0.013515 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/greyStop.png
+  artifactKey: Guid(613df7f97468e7a4582547b8ee51acd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/greyStop.png using Guid(613df7f97468e7a4582547b8ee51acd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dddf859952fcd75386ce1b7e82120e8c') in 0.012700 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/deleteButton.png
+  artifactKey: Guid(f33ff7bf35f7add4a8230fe7b0ee97c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/deleteButton.png using Guid(f33ff7bf35f7add4a8230fe7b0ee97c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd87f6f4efba2a406e5edee28e803017f') in 0.012038 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
   Time since last request: 0.000024 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Pink.mat
-  artifactKey: Guid(9cbe122d0bf53f14ba269e044bc3f03b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/iconHills.png
+  artifactKey: Guid(afe502550c1473447bd0cd4e8f6fa595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Pink.mat using Guid(9cbe122d0bf53f14ba269e044bc3f03b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebad5fa44f984391f665665db4d7f790') in 0.015768 seconds 
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Grey1.mat
-  artifactKey: Guid(64859cf955a5fb047880af754183e463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Grey1.mat using Guid(64859cf955a5fb047880af754183e463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0f89d50db30baac8797d61a3cb34cbb') in 0.014707 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Blue3.mat
-  artifactKey: Guid(c90bcdf992e150d41b0ee0f7aabccad6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Blue3.mat using Guid(c90bcdf992e150d41b0ee0f7aabccad6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '920ea43a097de6f5d52fdfe85b92333b') in 0.017449 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_White.mat
-  artifactKey: Guid(f904fac889ccd8d42b60ac1c11dc5f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_White.mat using Guid(f904fac889ccd8d42b60ac1c11dc5f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea5aa728c806cab392ee79bcace09c95') in 0.013826 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Brown.mat
-  artifactKey: Guid(bb9ba0197f6873943824ae7aade506c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Brown.mat using Guid(bb9ba0197f6873943824ae7aade506c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7094ba95857734bd81717120c7ccd7a6') in 0.013815 seconds 
-Number of asset objects unloaded after import = 3
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/iconHills.png using Guid(afe502550c1473447bd0cd4e8f6fa595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e68b5f5ed9e6e4f87e0f51f73e738d93') in 0.012495 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
   Time since last request: 0.000016 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Green2.mat
-  artifactKey: Guid(35e2a03bbcc6739409a02bb46883d128) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/whiteStopRollover.png
+  artifactKey: Guid(40db04cf1eae4ba43aec1d1d7f547214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Green2.mat using Guid(35e2a03bbcc6739409a02bb46883d128) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22f0e9933969aab71fea7e2f2e19fccc') in 0.013799 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Grey4.mat
-  artifactKey: Guid(cd022c63e7c1c7f4e98c0083ed2bcf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Grey4.mat using Guid(cd022c63e7c1c7f4e98c0083ed2bcf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f1ec8b84a1cd73e1afff325d888e741') in 0.014198 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 16.435418 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/Standard/Prototype_512x512_Blue3.mat
-  artifactKey: Guid(b0b4de3bd6e976e4f8b3adc6e72377ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/Standard/Prototype_512x512_Blue3.mat using Guid(b0b4de3bd6e976e4f8b3adc6e72377ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95d1f8085f90f966a6895e0cebe17f84') in 0.191961 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/Standard/Prototype_512x512_Red.mat
-  artifactKey: Guid(5a26de236ce89e94b963be8fa2b7ade6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/Standard/Prototype_512x512_Red.mat using Guid(5a26de236ce89e94b963be8fa2b7ade6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a28b2508c9e20a7e3de9b983a55ea59') in 0.038754 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/Standard/Prototype_512x512_Green3.mat
-  artifactKey: Guid(f6298605825d7154f8923c76872aa46e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/Standard/Prototype_512x512_Green3.mat using Guid(f6298605825d7154f8923c76872aa46e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd671fd5adce91ae67c65d345fcebcd97') in 0.020334 seconds 
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/Standard/Prototype_512x512_Grey3.mat
-  artifactKey: Guid(17c44fb3e5be9644586a0728a5f5a386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/Standard/Prototype_512x512_Grey3.mat using Guid(17c44fb3e5be9644586a0728a5f5a386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c166d5610e604ebcafe63cf7b706e02') in 0.043134 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/Standard/Prototype_512x512_Green1.mat
-  artifactKey: Guid(79f64ed6f5d6d374d91c3a0af4070258) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/Standard/Prototype_512x512_Green1.mat using Guid(79f64ed6f5d6d374d91c3a0af4070258) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c09e96bc648a2a46d113f4799be17fb1') in 0.037142 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/Standard/Prototype_512x512_Cyan.mat
-  artifactKey: Guid(cba66c276aed0874091de1c33eb3950d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/Standard/Prototype_512x512_Cyan.mat using Guid(cba66c276aed0874091de1c33eb3950d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19edb774ff3b6f0d522b212b85b18151') in 0.036047 seconds 
-Number of asset objects unloaded after import = 3
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/whiteStopRollover.png using Guid(40db04cf1eae4ba43aec1d1d7f547214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ca747539812bfe748fb0fd697653138') in 0.012244 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
   Time since last request: 0.000016 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/Standard/Prototype_512x512_Grey1.mat
-  artifactKey: Guid(c181c23a6120fbe4aadd5bb53a58dd78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/iconMoore.png
+  artifactKey: Guid(54d8b277e9cd64949b3696ccf36a5f95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/Standard/Prototype_512x512_Grey1.mat using Guid(c181c23a6120fbe4aadd5bb53a58dd78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65bfe80ebbeb2a912b5fb93aff95bcca') in 0.028261 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 5.044490 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Blue3.mat
-  artifactKey: Guid(f5ffb23c71776424f8f776c97d3fd190) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Blue3.mat using Guid(f5ffb23c71776424f8f776c97d3fd190) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b04f0ef8e135db1c242800daa99ad699') in 0.011986 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Cyan.mat
-  artifactKey: Guid(3d9914e92c1db3f4caed885c92e0b7e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Cyan.mat using Guid(3d9914e92c1db3f4caed885c92e0b7e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '567ac4385d0da6dadeba2a8e0a98e54c') in 0.023855 seconds 
-Number of asset objects unloaded after import = 3
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/iconMoore.png using Guid(54d8b277e9cd64949b3696ccf36a5f95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '101992d6a205b5587d8e2c73af29504d') in 0.013365 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
   Time since last request: 0.000016 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Grey1.mat
-  artifactKey: Guid(dfc08c90188302847afb04f628582097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/slopeStop1.png
+  artifactKey: Guid(76fd504bf8b40eb4181f2156ff1b8450) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Grey1.mat using Guid(dfc08c90188302847afb04f628582097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6b04fb1ea558d863eee9c455bbe0642') in 0.006453 seconds 
-Number of asset objects unloaded after import = 3
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/slopeStop1.png using Guid(76fd504bf8b40eb4181f2156ff1b8450) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26e87de4ed6f66d7e3bc8cd6a6a4e324') in 0.012488 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Magenta.mat
-  artifactKey: Guid(9618c6b42230db7408b3b734da21470a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000015 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/modelBackgroundDown.png
+  artifactKey: Guid(069090165514e814285334729a6e5bcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Magenta.mat using Guid(9618c6b42230db7408b3b734da21470a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06c70e85978b2ddd8d8a6b2c8ad4cd1e') in 0.007240 seconds 
-Number of asset objects unloaded after import = 4
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/modelBackgroundDown.png using Guid(069090165514e814285334729a6e5bcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '645fa85ce2ffa8c8170c88680edc4e6e') in 0.012198 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Green2.mat
-  artifactKey: Guid(6b38742730e330c488cc8d7964788813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000015 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/Model_00_Tx1.jpg
+  artifactKey: Guid(7d5853ddd349b8d418876417f4bf2573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Green2.mat using Guid(6b38742730e330c488cc8d7964788813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d39ec4f51e248b1dc8065774005aa0a') in 0.006683 seconds 
-Number of asset objects unloaded after import = 3
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/Model_00_Tx1.jpg using Guid(7d5853ddd349b8d418876417f4bf2573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c12040a1d91ce2f2fe5f5d881627e850') in 0.013382 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Green3.mat
-  artifactKey: Guid(bce32739db90b6843ac7f0179bcaa6b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000015 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/modelBackgroundHover.png
+  artifactKey: Guid(2d5c15aa954c2b34f9ebe154c29b6c8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Green3.mat using Guid(bce32739db90b6843ac7f0179bcaa6b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd28ab7aa8fc9d284eeb372c5580a3cc') in 0.007100 seconds 
-Number of asset objects unloaded after import = 4
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/modelBackgroundHover.png using Guid(2d5c15aa954c2b34f9ebe154c29b6c8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3a21e08c1976255514ff5dddd03aacc') in 0.012632 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Orange.mat
-  artifactKey: Guid(d1a5903867c8f0a4a8a94c3fe36dad11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000016 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/Model_02_Tx3.jpg
+  artifactKey: Guid(dc4dd15be86f08d4f845a7662d2b0a32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Orange.mat using Guid(d1a5903867c8f0a4a8a94c3fe36dad11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '007a281f2463b7f7b59040ed60ad55de') in 0.006587 seconds 
-Number of asset objects unloaded after import = 3
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/Model_02_Tx3.jpg using Guid(dc4dd15be86f08d4f845a7662d2b0a32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dda2ecc273953551da00598192a378ab') in 0.014301 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 8.316168 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Grey4.mat
-  artifactKey: Guid(4084a843b9ef6af45a63b7163f9fbefb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000015 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/Model_04_Tx2.jpg
+  artifactKey: Guid(d0d37caa55753394b8c49c45b3f4a577) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Grey4.mat using Guid(4084a843b9ef6af45a63b7163f9fbefb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '883352cf146332c70a0e86eb79fb726c') in 0.033266 seconds 
-Number of asset objects unloaded after import = 3
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/Model_04_Tx2.jpg using Guid(d0d37caa55753394b8c49c45b3f4a577) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e6422dcf70919f26f5616e85e70580a') in 0.014775 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Red.mat
-  artifactKey: Guid(a4b62a69d54e80347bd546999c6d4b9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000016 seconds.
+  path: Assets/com/heparo/terrain/toolkit/editor/resources/cyanToBlue.png
+  artifactKey: Guid(19fd34362dbaa1d4f99977acf4fa88b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Red.mat using Guid(a4b62a69d54e80347bd546999c6d4b9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eef6ce3935e19dfee0a639a91edaa40') in 0.015585 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Magenta.mat
-  artifactKey: Guid(9618c6b42230db7408b3b734da21470a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Magenta.mat using Guid(9618c6b42230db7408b3b734da21470a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f5c52d6d6e7eac7b92d88328b6fc881') in 0.018430 seconds 
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Orange.mat
-  artifactKey: Guid(d1a5903867c8f0a4a8a94c3fe36dad11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Orange.mat using Guid(d1a5903867c8f0a4a8a94c3fe36dad11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4707579698225d4c7f3229e0098d3785') in 0.020208 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 85.395841 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Blue2.mat
-  artifactKey: Guid(e070baac7ac0c374ba010641b095c1b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Blue2.mat using Guid(e070baac7ac0c374ba010641b095c1b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd27f08c8240aa9ac0e044741ddff7cdb') in 0.017683 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Purple.mat
-  artifactKey: Guid(08ad40672f8bdd84c8231727ae06ba48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Purple.mat using Guid(08ad40672f8bdd84c8231727ae06ba48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f9c16ccf68dd4f64563aab9eeee6f89') in 0.007374 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Magenta.mat
-  artifactKey: Guid(4f8daeaadc7b77c42b2004245caa7f63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Magenta.mat using Guid(4f8daeaadc7b77c42b2004245caa7f63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91ac408c917f8942b3855f0149bd7552') in 0.012890 seconds 
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Green1.mat
-  artifactKey: Guid(f29b9efacb0fa1b45a6ebd5778585717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Green1.mat using Guid(f29b9efacb0fa1b45a6ebd5778585717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4a42030f9854391a602b7cf160f0b16') in 0.011171 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Orange.mat
-  artifactKey: Guid(7e6b6a154cd59634b8e06a92e338ba2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Orange.mat using Guid(7e6b6a154cd59634b8e06a92e338ba2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5db058b8f305739e38b5663428af6dc3') in 0.006621 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Olive.mat
-  artifactKey: Guid(a3b40d06620734d4fa8f4423d0f09692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Olive.mat using Guid(a3b40d06620734d4fa8f4423d0f09692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61e93901a9ef43c9f6d40e7fc7fc1e48') in 0.011703 seconds 
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Green3.mat
-  artifactKey: Guid(8474bf551220f0e4993899dfdc95aed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Green3.mat using Guid(8474bf551220f0e4993899dfdc95aed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '014f1ea3e20ccfbe8b21497638a55204') in 0.011316 seconds 
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Brown.mat
-  artifactKey: Guid(bb9ba0197f6873943824ae7aade506c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Brown.mat using Guid(bb9ba0197f6873943824ae7aade506c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ef3f12226a169bfc43dc579f065e5ba') in 0.011377 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Green2.mat
-  artifactKey: Guid(35e2a03bbcc6739409a02bb46883d128) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Green2.mat using Guid(35e2a03bbcc6739409a02bb46883d128) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89f4901960b3f3266a7c01ba4aa1c38f') in 0.013516 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Grey4.mat
-  artifactKey: Guid(cd022c63e7c1c7f4e98c0083ed2bcf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/block materials/Ciathyza/Gridbox Prototype Materials/Materials/HDRP/Prototype_512x512_Grey4.mat using Guid(cd022c63e7c1c7f4e98c0083ed2bcf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5143f2e2a765bb034ef4147f9fec77d') in 0.007246 seconds 
-Number of asset objects unloaded after import = 3
+Start importing Assets/com/heparo/terrain/toolkit/editor/resources/cyanToBlue.png using Guid(19fd34362dbaa1d4f99977acf4fa88b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91019c749c99740aaebf48ce1b7bfa8a') in 0.012425 seconds 
+Number of asset objects unloaded after import = 2
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
