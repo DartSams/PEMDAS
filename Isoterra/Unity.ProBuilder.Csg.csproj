@@ -58,15 +58,15 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.probuilder@5.2.2\External\CSG\Classes\Vertex.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.2.2\External\CSG\Classes\Model.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@5.2.2\External\CSG\CSG.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.2.2\External\CSG\Classes\Polygon.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@5.2.2\External\CSG\Classes\Plane.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@5.2.2\External\CSG\Classes\Node.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@5.2.2\External\CSG\CSG.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@5.2.2\External\CSG\Classes\VertexUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.2.2\External\CSG\Classes\VertexAttributes.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.2.2\External\CSG\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@5.2.2\External\CSG\Classes\Node.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@5.2.2\External\CSG\Classes\VertexUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@5.2.2\External\CSG\Classes\Vertex.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@5.2.2\External\CSG\Classes\Plane.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.probuilder@5.2.2\External\CSG\Unity.ProBuilder.Csg.asmdef" />
@@ -446,6 +446,10 @@
     </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.4\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
