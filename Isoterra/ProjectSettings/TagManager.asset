@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - player
+  - healthPickup
+  - damagePickup
+  - coinPickup
+  - ground
+  - portalIn
+  - portalOut
+  - weaponPickup
+  - meleeWeapon
+  - weapon
   layers:
   - Default
   - TransparentFX
